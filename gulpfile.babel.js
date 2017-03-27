@@ -8,10 +8,10 @@ import source from 'vinyl-source-stream';
 import uglify from 'gulp-uglify';
 import stringify from 'stringify';
 
-gulp.task('default', ['bundle']);
+gulp.task('default', ['build']);
 
-gulp.task('bundle', () => {
-  gutil.log('bundle called');
+gulp.task('build', () => {
+  gutil.log('build called');
   const bundler = browserify('src/bookmarklet.js');
   bundler.transform(babelify);
   bundler.transform(stringify, {
