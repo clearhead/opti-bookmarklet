@@ -1,0 +1,43 @@
+.hidden {
+  display: none
+}
+#opti-modal {
+  position: fixed;
+  width: 550px;
+  top: 0;
+  right: 0;
+  padding: 20px;
+  background-color: #efefef;
+  border: 1px solid #666;
+  z-index: 9999999;
+  text-align: left;
+}
+#opti-modal > h3 {
+  font-size: 20px !important;
+  font-weight: 500;
+}
+#opti-modal > h3:after {
+  content: 'present on this page';
+  margin-left: 5px;
+  color: #039832;
+}
+#opti-modal.opti-not-present > h3:after {
+  content: 'not present on this page';
+  color: #d30505;
+}
+#opti-modal.opti-not-present #opt-out {
+  display: none;
+}
+#opti-modal.opti-not-present .not-present-disclaimer {
+  display: block;
+}
+#opti-modal .close-button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  height: 15px;
+  width: 15px;
+  background-image: url(//cdn.optimizely.com/img/220146585/f860c5492b97484d8f6254d5a13a45e7.png);
+  background-size: cover;
+  cursor: pointer;
+} 
